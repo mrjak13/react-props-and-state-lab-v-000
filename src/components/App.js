@@ -31,12 +31,12 @@ class App extends React.Component {
     }
   }
 
-  onFindPetsClick = () => { 
-    
+  onFindPetsClick = () => {
+
     fetch(this.setUrl(), {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json', 
+        'Content-Type': 'application/json',
       }
     })
     .then(res => res.json())
@@ -47,7 +47,7 @@ class App extends React.Component {
 
 
 
-  onAdopPet = (id) => {     
+  onAdopPet = (id) => {
     this.setState({
       pets: this.state.pets.map(pet => {
         if (pet.id === id) {
